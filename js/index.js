@@ -1,19 +1,23 @@
 const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector("footer");
+let thisYear = today.getFullYear();
+let footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-const text = "Perry Littrell " + thisYear;
-const skills = ["highly organized", "bilingual English/Spanish", "self motivated"];
-const skillsSection = document.getElementById('skills');
-//const skillsList = 
-
-copyright.innerHTML = text;
+copyright.innerHTML = `Perry Littrell &copy; ${thisYear}`;
 footer.appendChild(copyright);
+const skills = ['highly organized', 'bilingual English/Spanish', 'self motivated'];
+const skillsSection = document.getElementById('skills');
+const skillsList = skillsSection.getElementsByTagName('ul');
+
+
+
 
 
 for(let i = 0; i < skills.length; i++) {
-  let skill = createElement('li');
+  let skill = document.createElement('li');
+  skill.innerHTML = skills[i];
+  skillsSection.appendChild(skill);
 }
+
 
 
 
