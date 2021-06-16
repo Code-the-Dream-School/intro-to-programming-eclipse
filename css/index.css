@@ -109,7 +109,7 @@ nav .fa{
     padding: 1rem 0;
 }
 .mainimg{
-    width: 100;
+    width: auto;
     border-radius: 50%;
 }
 .experience, .contacts{
@@ -146,7 +146,6 @@ nav .fa{
     align-items: center;
     font-size: 1.5rem;
     color:#fff;
-    padding: auto;
     border-radius: 1rem;
 }
 .experience li{
@@ -177,7 +176,6 @@ nav .fa{
     z-index: -1;
   }
 .experience li:hover:after{
-    text-decoration-thickness: 0.2rem ;
     color: #fff;
     border:rgb(228, 149, 12) solid 5px;
     border-radius: 1rem;
