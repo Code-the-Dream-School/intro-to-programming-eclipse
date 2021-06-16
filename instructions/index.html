@@ -4,75 +4,115 @@
   <head>
     <meta charset="UTF-8">
     <title>Monica Delgado</title>
+    <!-- imported font from google -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
   </head>
 
   <body>
-
+    <!--My name as a tittle presentation--> 
     <div>
-      <h1 style="color:green;">Monica Delgado</h1>
+      <h1 id="name_tittle">Monica Delgado</h1>
     </div>
 
+    <!--Starting Sections as an unordered list-->
     <ul>
 
+      <!-- Who I am (about me)-->
       <li>
         <section>
-          <h1>About me</h1>
-          <p>
+          <h1 class="all_heading">About:</h1>
+          <p class="margin">
             I'm Monica, an enthusiastic apprentice at Code the Dream (CTD) based in North Carolina.
           </p>
-          <p>
+          <p class="margin">
             Something interesting about me is that I am a fan of psychology, philosophy and history. In my home country I studied psychology and civil engineering . I have always wondered how our species created this universe in what is now a little machine called a computer, with which we can create, share and grow. This motivated me to change my path and start a career as a web developer. Drawing, designing and teaching are part of my passions too. When I am not working/studying I spend time reading, whatching a good tv show, eating delicious things, working out and enjoying time with my family.
           </p>
         </section>
       </li>
 
+      <!-- My experience-->
       <li>
         <section>
-          <h1>Experience</h1>
-          <p>
-            I am currently learning JavaScript, HTML, and CSS. I have experience as a daycare teacher but right now I am working as a nanny taking care of two awesome kids.
-          </p>
+          <h1 class="all_heading">Experience</h1>
+         <!-- 
+         x 1. I want to create sections for my experiences 
+         x 2. I want each section to have borders (boxes)
+         x 3. I want the border/boxes to be orange 
+         x 4. I want the thickness of the border to be 5px
+         x 5. I want 5 px of space between the boxes 
+
+         -->
+        <div class="boxes">Nanny/ House Manager – Belgrove family, January/Present </div>
+        <div class="boxes">Nanny – Collins-Bucks family, January/2020 – December/2020</div>
+        <div class="boxes">Teacher, Sounds and Color, May/2018 – December/2019</div>
+        <div class="boxes">Waitress/Bartender, La Rancherita, January/2017- April/2018</div>
+ 
         </section>
       </li>
 
+      <!--My skilss-->
       <section id="skills">
-        <h2>Skills</h2>
+        <h2 class="all_heading" >Skills</h2>
+        <!--
+           x1. I want my skills (list) in the same line 
+           x2. I want my skills/list inside separed styled boxes 
+           x3. I want 2px space between the boxes 
+           x4. I want to erase the circle on each list item
+           x5. I want the thickness of the border to be 2 px
+
+        -->
         <ul></ul>
       </section>
 
+      <!--Let's get in touch section--> 
       <li>
         <section>
-          <h1>Connect</h1>
-          <p>You can contact me at:</p>
-          <p>mnca.delgado@gmail.com</p>
-          <p> Github Username: mnca16</p>
+          <h1 class="all_heading">Connect</h1>
+          <p><a href= "mailto: mnca.delgado@gmail.com">mnca.delgado@gmail.com</a></p>
+          <p><a href="https://github.com/mnca16" target="_blank">github.com/mnca16</a></p>
         </section>
       </li>
 
     </ul>
-
+     
+    <!--form code (Leave me a message)--> 
     <section>
-     <h2>Leave a Message</h2>
+     <h2 class="all_heading">Leave a Message</h2>
+
+     <!--
+      Message form 
+       x1. I want to change size and color of the labels
+       x2. Change the font size, padding and border of inputs and textarea
+       x3. Add spacing between fields 
+      -->
+
      <form name="leave_message">
-       <label>Name:</label>
-        <input type="text" name="name" required=true>
-        <br/>
-       <label>Email:</label>
-        <input type="email" name="email" required=true>
 
-       <label>Message:</label>
+       <label class="labels" >Name:</label>
+        <input type="text" name="name" required=true placeholder="Enter Text">
+
+       <label class="labels" >Email:</label>
+        <input type="email" name="email" required=true placeholder="Enter Text">
+        
+       </br>
+       <label class="labels" >Message:</label>
         <textarea name="message" required=true>
-        </textarea><br>
+        </textarea>
 
-       <label></label> 
-        <button type="submit">Submit</button><br>
+      </br>
+        <button type="submit" class="submit-button">Submit</button><br>
+
      </form>
     </section>
+    
 
-    <section id="messages">
-      <h2>Messages</h2>
+    <!--Showing people's opinion or experiences with me/portfolio -->
+    <section id="messages" class="message-block">
+      <h2 class="all_heading">Messages</h2>
       <ul></ul>
     </section>
+    
 
     <footer></footer>
   <script src="js/index.js"> </script>
