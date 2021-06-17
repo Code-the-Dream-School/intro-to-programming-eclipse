@@ -1,0 +1,61 @@
+
+@media screen and (max-width: 736px) {
+
+}
+
+body {
+    background-color: rgb(185, 219, 250);
+    color: #160181;
+    font-family: "Montserrat", sans-serif;
+}
+section {
+   margin: 2rem;
+   padding: 2rem; 
+}
+h2 {
+    font-size: 1.5rem;
+    color: #0c033d4d;
+    font-weight: bold;
+}
+#about {
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: lightgray; 
+}
+#experience {
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: lightgray;
+}
+li {
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: lightgray;  
+}
+label {
+    font-size: 1.5rem;
+    color: hotpink;
+}
+input {
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: 4rem;
+}
+textarea {
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: auto; 
+}
+#submit {
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding: .5rem;
+    background-color: hotpink;
+}
+footer {
+    margin: 2rem;
+    background-color: blanchedalmond;
+}
+.remove {
+    background-color: hotpink;  
+}

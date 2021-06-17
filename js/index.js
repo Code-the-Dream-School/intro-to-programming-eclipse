@@ -36,7 +36,7 @@ for(let i = 0; i < skills.length; i++) {
       const removeButton = document.createElement("button");
       removeButton.textContent= "remove";
       removeButton.type= "button";
-      //messageSection.appendChild(removeButton);
+      removeButton.className="remove";
       newMessage.appendChild(removeButton);
       messageList.appendChild(newMessage);
       
