@@ -1,0 +1,110 @@
+body {
+ background-color: #befdeb;
+ color: #545479;
+
+}
+
+.margin {
+  margin-left: 50px;
+}
+
+.all_heading {
+ font-size: 30px;
+ font-weight: bold;
+ color: #FA844B;
+
+}
+
+.boxes {
+    border-color: #545479;  
+    border-width: 1px;  
+    border-style: inset;
+    margin: 10px;
+}
+
+#skills > ul > li {
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 10px;
+    width: 100px;
+}
+
+#skills > ul {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  padding: 0
+
+}
+
+.labels {
+    font-size: 18px;
+    color: #FA844B;
+    font-family: sans-serif;
+}
+
+input {
+    font-family: sans-serif;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 1px;
+    width: 200px;
+}
+
+textarea {
+    font-family: sans-serif;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 1px;
+    width: 200px;
+}
+
+label {
+ width: 100px;
+ display: inline-block;
+ padding: 10px;
+ margin-block: 15px;
+}
+
+.submit-button {
+    width: 100px;
+    height: 25px;
+    border: none;
+    color: #545479;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 hsl(240, 71%, 84%);
+    transition: ease-in-out 0.1s;
+    outline: none;
+    margin-left: 125px;
+}
+
+.submit-button:hover {
+    box-shadow: inset 100px 0 0 0 hsl(240, 71%, 84%);
+    cursor: pointer;
+    color: black;
+}
+
+.message-block > ul > li > button {
+   display: flex;
+   flex: 1;
+   border: none;
+   color: #545479;
+   background-color: white;
+   border-radius: 4px;
+
+
+}
