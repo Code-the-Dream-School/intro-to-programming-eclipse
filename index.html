@@ -3,10 +3,19 @@
   <head>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <img src="IMG_0891.jpg" width="300" height="500" />
+   
     <title>About Perry Littrell</title>
+    <nav class="menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
   </head>
   <body>
+    <img src="IMG_0891.jpg" width="300" height="500" />
     <h1>Perry Littrell</h1>
     <section>
       <h2>About:</h2>
@@ -44,9 +53,9 @@
         <li>https://www.instagram.com/gemcrate/</li>
       </ul>
     </section>
-    <section>
+    <section id="leave_message">
       <h2>Leave a Message</h2>
-      <form name="leave_message">
+      <form name="leave_message" class="form">
         <label for="name">Name</label>
         <input type="text" name="name" required="true" /><br />
         <label for="email">Email</label>

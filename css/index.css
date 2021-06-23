@@ -2,6 +2,22 @@
 @media screen and (max-width: 736px) {
 
 }
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    position: fixed;
+    margin-left: 350px;
+    
+}
+li a {
+    color: #160181;
+     background-color: #0c033d4d; 
+     padding: 20px;
+     margin: -20px;
+     background-color: rgb(185, 219, 250);
+    
+}
 
 body {
     background-color: rgb(185, 219, 250);
@@ -27,6 +43,18 @@ h2 {
     padding: 1.5rem;
     background-color: lightgray;
 }
+#leave_message {
+    display: flex;
+    border: 1px solid #000;
+    background: cornsilk;
+    
+}
+.form {
+    justify-content: space-between;
+    background-color: lightgray;
+    ;
+}
+
 li {
     margin: 2rem;
     padding: 1.5rem;
@@ -34,7 +62,7 @@ li {
 }
 label {
     font-size: 1.5rem;
-    color: hotpink;
+    color: #160181;
 }
 input {
     font-size: 1.5rem;
@@ -48,14 +76,15 @@ textarea {
 }
 #submit {
     font-size: 1rem;
+    color: cornsilk;
     border-radius: 2rem;
     padding: .5rem;
-    background-color: hotpink;
+    background-color: #160181;
 }
 footer {
     margin: 2rem;
     background-color: blanchedalmond;
 }
 .remove {
-    background-color: hotpink;  
+    background-color: #160181; 
 }
