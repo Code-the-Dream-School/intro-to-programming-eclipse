@@ -5,52 +5,69 @@
     <meta name="author" content="Munir Nuristani">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     
 </head>
-<body>
+<body>  
     <header>
-        <div id="head">Small Logo</div>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#connect">connect</a></li>
-            </ul>
+            <div class="nav-links" id="nav-links" >
+                <i class="fa fa-times" id="hideMenu"></i>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#connect">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" id="showMenu"></i>
         </nav>
     </header>
-    <h1>Munir Nuristani</h1>
-    <img src="#" alt="Author's picture">
-    <div>
-        <h2 id="about">About</h2>
-        <p> My name is Munir Nuristani. I am an aspiring web developer. I am currently studying to become a Web Developer. 
-            I have extensive experience in Security, Risk, and Crisis Management.  I am working on several projects which wil be published soon.
-            The very first project that I worked on is a version of Rock, Paper and Scissors Game. If you have any questions or comments, please feel free to contact me through links listed below. </p>
+   
+    <div class="heading" id="about">
+        <h1>Munir Nuristani</h1>
+        <div class="aboutSection">
+            <span class="span1">
+                <img class="mainimg" src="images/profile_pic.jpg" width="200" height="200" alt="Author's picture">
+            </span>
+            <span class="span2">
+                <h2>About</h2>
+                <p> My name is Munir Nuristani. I am an aspiring web developer. I am currently studying to become a Web Developer. 
+                    I have extensive experience in Security, Risk, and Crisis Management.  I am working on several projects which wil be published soon.
+                    The very first project that I worked on is a version of Rock, Paper and Scissors Game. If you have any questions or comments, please feel free to contact me through links listed below. </p>
+            </span>
+        </div>
     </div>
-    <p><a href="#head">Back to top</a></p>
     <div>
+        <button id="button" title="Go to top">Go to Top</button>
+    </div>
+    <div class="experience">
         <h2 id="projects">Experience</h2>
         <ul>
             <li><a href="https://github.com/MunirNuristani/rockpaperscissors" target = "_blank"> Rock Paper Scissors - The Classic Game </a></li>
-            <li> More project - coming soon</li>
+            <li><a href="#">Next Project - Magic 8 Ball</a></li>
+            <li><a href="#">More project - coming soon</a></li>
         </ul>
-        <p><a href="#head">Back to top</a></p>
     </div>
-    <div id="skills">
+    <div id="skills" class="skills">
         <h2>Skills</h2>
         <ul></ul>
     </div>
-    <div>
-        <h2 id="connect">Connect</h2>
+    <div class="contacts">
+        <h2 id="connect">Contact</h2>
         <ul>
-            <li><a href="https://www.facebook.com/munir.sami/"target = "_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/MunirNuristani"target = "_blank">Twitter</a></li>
-            <li><a href="https://github.com/MunirNuristani"target = "_blank">Github</a></li>
-            <li><a href="mailto: nuristani.munir@gmail.com">Email</a></li>
+            <li><a href="https://www.facebook.com/munir.sami/"target = "_blank"><img src="../images/fb.png" width="50px" alt="facebook-icon"/></a></li>
+            <li><a href="https://twitter.com/MunirNuristani"target = "_blank"><img src="../images/twitter.png" width="50px" alt="twitter-icon"/></a></li>
+            <li><a href="https://github.com/MunirNuristani"target = "_blank"><img src="../images/github.png" width="50px" alt="github-icon"/></a></li>
+            <li><a href="https://www.linkedin.com/in/munir-nuristani-6a090a154/" target="_blank"><img src="../images/linkedin.png" width="50px"/></a></li>
+            <li><a href="mailto: nuristani.munir@gmail.com"><img src="../images/mail.png" width="50px" alt="mail-icon"/></a></li>
         </ul>
-        <p><a href="#head">Back to top</a></p>
+        
     </div>
-    <section>
+    <div class="messageBox">
         <h2> Leave a Message</h2>
         <form id="leave_message" name="leave_message">
             <label for="name">Name</label> <br/>
@@ -61,13 +78,12 @@
             <textarea name="message" required placeholder="Enter Message Here!"></textarea><br/>
             <button type="submit">Submit</button><br/>
         </form>
-    </section>
-    <section id="messages" > 
+    </div>
+    <div id="messages" class="messages" > 
         <h2>Messages</h2>
-        <ul>
-
+        <ul id='hideShow'>
         </ul>
-    </section>
+    </div>
     <footer></footer>
     <script src="js/index.js"></script>
 </body>
