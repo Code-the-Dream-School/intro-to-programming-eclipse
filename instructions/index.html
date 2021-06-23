@@ -4,16 +4,40 @@
   <head>
     <meta charset="UTF-8">
     <title>Monica Delgado</title>
-    <!-- imported font from google -->
+    <!--
+      Header font style
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Body font style -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
   </head>
 
   <body>
-    <!--My name as a tittle presentation--> 
-    <div>
-      <h1 id="name_tittle">Monica Delgado</h1>
-    </div>
+    <!--
+       Navigation bar 
+         1. Create a header with a nav element
+         2. To Link all the section witn my nav header 
+         3. I want my name on the left side 
+         4. I want my sections on the right side
+         5. When I minimize the size of the page I want manu on the right side
+    -->
+    <header>
+      <h3 class="main_name"><a href="#top">Monica Delgado</a></h3>
+       <nav>
+         <ul class="list_sections">
+           <li><a href="#about">About</a></li>
+           <li><a href="#experience">Experience</a></li>
+           <li><a href="#skills">Skills</a></li>
+           <li><a href="#message">Leave a message</a></li>
+         </ul>
+       </nav>
+       <a class="connet_btn" href= "mailto: mnca.delgado@gmail.com" ><button class="btn_head">Connect</button></a>
+
+    </header>
+
 
     <!--Starting Sections as an unordered list-->
     <ul>
@@ -21,7 +45,7 @@
       <!-- Who I am (about me)-->
       <li>
         <section>
-          <h1 class="all_heading">About:</h1>
+          <h1 class="all_heading" id="about">About:</h1>
           <p class="margin">
             I'm Monica, an enthusiastic apprentice at Code the Dream (CTD) based in North Carolina.
           </p>
@@ -34,26 +58,49 @@
       <!-- My experience-->
       <li>
         <section>
-          <h1 class="all_heading">Experience</h1>
+          <h1 class="all_heading" id="experience">Experience</h1>
          <!-- 
          x 1. I want to create sections for my experiences 
          x 2. I want each section to have borders (boxes)
          x 3. I want the border/boxes to be orange 
          x 4. I want the thickness of the border to be 5px
          x 5. I want 5 px of space between the boxes 
-
          -->
-        <div class="boxes">Nanny/ House Manager – Belgrove family, January/Present </div>
-        <div class="boxes">Nanny – Collins-Bucks family, January/2020 – December/2020</div>
-        <div class="boxes">Teacher, Sounds and Color, May/2018 – December/2019</div>
-        <div class="boxes">Waitress/Bartender, La Rancherita, January/2017- April/2018</div>
+         <!--
+          <div class="container">
+            <div class="boxes">Nanny/ House Manager – Belgrove family, January/Present </div>
+            <div class="boxes">Nanny – Collins-Bucks family, January/2020 – December/2020</div>
+            <div class="boxes">Teacher, Sounds and Color, May/2018 – December/2019</div>
+            <div class="boxes">Waitress/Bartender, La Rancherita, January/2017- April/2018</div>
+          </div>
+          -->
+          <div id="experience_box">
+            <div class="experience_cont">
+
+              <div class="work_expe">
+                <div class="boxes">Nanny/ House Manager – Belgrove family</div>
+                <div class="boxes">Nanny – Collins-Bucks family</div>
+                <div class="boxes">Teacher, Sounds and Color</div>
+                <div class="boxes">Waitress/Bartender, La Rancherita</div>
+              </div>
+
+              <div class="dates">
+                <div class="boxes b2">January/Present </div>
+                <div class="boxes b2">January/2020 – December/2020</div>
+                <div class="boxes b2">May/2018 – December/2019</div>
+                <div class="boxes b2">January/2017- April/2018</div>
+              </div>
+
+            </div>
+          </div>
+
  
         </section>
       </li>
 
       <!--My skilss-->
       <section id="skills">
-        <h2 class="all_heading" >Skills</h2>
+        <h2 class="all_heading" id="skills">Skills</h2>
         <!--
            x1. I want my skills (list) in the same line 
            x2. I want my skills/list inside separed styled boxes 
@@ -68,7 +115,7 @@
       <!--Let's get in touch section--> 
       <li>
         <section>
-          <h1 class="all_heading">Connect</h1>
+          <h1 class="all_heading" id="connect">Connect</h1>
           <p><a href= "mailto: mnca.delgado@gmail.com">mnca.delgado@gmail.com</a></p>
           <p><a href="https://github.com/mnca16" target="_blank">github.com/mnca16</a></p>
         </section>
@@ -78,7 +125,7 @@
      
     <!--form code (Leave me a message)--> 
     <section>
-     <h2 class="all_heading">Leave a Message</h2>
+     <h2 class="all_heading" id="message">Leave a Message</h2>
 
      <!--
       Message form 

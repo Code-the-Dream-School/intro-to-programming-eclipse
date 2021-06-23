@@ -1,3 +1,56 @@
+
+/*Header (start)*/
+
+.main_name {
+    margin-right: auto;
+}
+
+
+li, a, button {
+    color: #545479;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+header {
+    font-family: 'Roboto Condensed', sans-serif;   
+    margin: 0;
+    padding: 3px 4%;
+    background-color: #f3cbb6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list_sections > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 15px;
+
+}
+
+.list_sections li a {
+    transition: all 0.3s ease 0s;
+}
+
+.list_sections li a:hover {
+    color:blue
+}
+
+.btn_head {
+    padding: 9px 25px;
+    background-color: whitesmoke;
+    border:none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+
+}
+
+/* header end*/
+
 body {
  background-color: #befdeb;
  color: #545479;
@@ -15,12 +68,20 @@ body {
 
 }
 
+
 .boxes {
-    border-color: #545479;  
-    border-width: 1px;  
-    border-style: inset;
-    margin: 10px;
+    border:#545479 0.5px solid;
+    border-right: none ; 
+    padding: 5px; 
+    margin-bottom: 10px;
+  
 }
+
+.b2 {
+    border-left: none ;
+    border-right: #545479 0.5px solid ;
+}
+
 
 #skills > ul > li {
     border: black solid 2px;
@@ -86,14 +147,14 @@ label {
     color: #545479;
     background-color: white;
     border-radius: 4px;
-    box-shadow: inset 0 0 0 0 hsl(240, 71%, 84%);
+    box-shadow: inset 0 0 0 0 hsl(20, 74%, 85%);
     transition: ease-in-out 0.1s;
     outline: none;
     margin-left: 125px;
 }
 
 .submit-button:hover {
-    box-shadow: inset 100px 0 0 0 hsl(240, 71%, 84%);
+    box-shadow: inset 100px 0 0 0 hsl(20, 74%, 85%); 
     cursor: pointer;
     color: black;
 }
@@ -106,5 +167,41 @@ label {
    background-color: white;
    border-radius: 4px;
 
+
+}
+
+/* Experience FlexBox container
+.container {
+   border-color: black;
+   border-width: 5px;
+   border-style: inset;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+
+
+}
+
+*/
+
+/* Experience FlexBox container*/
+
+.experience_cont {
+    display: flex;
+    justify-content:space-between; 
+}
+
+.work_expe {
+   flex: 1;
+   flex-direction: column;
+   
+
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    
+    
 
 }
