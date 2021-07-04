@@ -47,7 +47,18 @@ a {
  
 }
 .myname {
-    color: rgb(250, 164, 114);
+    /* color: rgb(250, 164, 114); */
+    color: #faa472;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #faa472,
+        0 0 82px #faa472,
+        0 0 92px #faa472,
+        0 0 102px #faa472,
+        0 0 151px #faa472;
+
     font-family: 'Rock Salt', cursive;
     font-size: 65px;
 }
@@ -64,15 +75,26 @@ h2 {
 #about {
     margin: 2rem;
     padding: 1.5rem;
+    font-size: 20px;
    
 }
-#experience {
+#experience li {
+    display: flex;
     margin: 2rem;
     padding: 1.5rem;
+    background-color: lightgray;
     
 }
 #skills li {
-    /* background-color: lightgray; */
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #160181;
+    padding: 6px;
+    background-color: lightgray;
+
+
 }
 
 }
@@ -108,18 +130,26 @@ textarea {
 
 #submit {
     font-size: 1rem;
-    color: cornsilk;
     border-radius: 2rem;
     padding: .5rem;
     background-color: #160181;
+    color: white;
 
+}
+.remove {
+    background-color: red;
+    color: white;
+    margin-left: 25px;
 }
 
 footer {
     margin: 2rem;
     background-color: blanchedalmond;
 }
-.remove {
-    background-color: #160181;
-    color: cornsilk; 
+#messages li {
+    display: flex;
+    border: 1px solid #000; 
+    background-color: lightgray;
+    padding-left: 15px;
 }
+

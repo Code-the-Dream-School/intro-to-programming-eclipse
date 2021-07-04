@@ -4,7 +4,7 @@ let footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 copyright.innerHTML = `Perry Littrell &copy; ${thisYear}`;
 footer.appendChild(copyright);
-const skills = ['highly organized', 'bilingual English/Spanish', 'self motivated'];
+const skills = ['JavaScript', 'HTML', 'CSS', 'bilingual English/Spanish'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.getElementsByTagName('ul');
 
@@ -28,7 +28,7 @@ for(let i = 0; i < skills.length; i++) {
     let messageList = messageSection.getElementsByTagName("ul")[0];
     let newMessage = document.createElement("li");
       
-    newMessage.innerHTML= `<a href= "mailto: ${email}">${name}</a><span>:${message}</span>`;
+    newMessage.innerHTML= `<a href= "mailto: ${email}">${name}</a><span>: ${message}</span>`;
     messageList.appendChild(newMessage);
       
     messageForm.reset();
