@@ -2,12 +2,67 @@
 @media screen and (max-width: 736px) {
 
 }
-
 body {
-    background-color: rgb(185, 219, 250);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(185, 219, 250); 
     color: #160181;
     font-family: "Montserrat", sans-serif;
 }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    width: 40%;
+    background: none;
+    
+}
+.menu li {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+a { 
+    color: #160181;
+     text-decoration: none;
+    
+}
+.background {
+   background-image: url("../images/Version 2.jpg");
+   background-size: cover;
+   text-align: center;
+   padding-top: 100px;
+}
+.mypicture {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+ 
+}
+.myname {
+    /* color: rgb(250, 164, 114); */
+    color: #faa472;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #faa472,
+        0 0 82px #faa472,
+        0 0 92px #faa472,
+        0 0 102px #faa472,
+        0 0 151px #faa472;
+
+    font-family: 'Rock Salt', cursive;
+    font-size: 65px;
+}
+
 section {
    margin: 2rem;
    padding: 2rem; 
@@ -20,42 +75,81 @@ h2 {
 #about {
     margin: 2rem;
     padding: 1.5rem;
-    background-color: lightgray; 
+    font-size: 20px;
+   
 }
-#experience {
+#experience li {
+    display: flex;
     margin: 2rem;
     padding: 1.5rem;
     background-color: lightgray;
+    
 }
+#skills li {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #160181;
+    padding: 6px;
+    background-color: lightgray;
+
+
+}
+
+}
+ #leave_message { 
+    display: flex;
+    border: 1px solid #000;
+}
+form { 
+    display: flex; 
+}
+
+
 li {
-    margin: 2rem;
-    padding: 1.5rem;
-    background-color: lightgray;  
+    margin: 10px;
+    padding: 1.5px;
 }
 label {
-    font-size: 1.5rem;
-    color: hotpink;
+    font-size: 15px;
+    color: #160181;
 }
+
 input {
-    font-size: 1.5rem;
-    padding: 2rem;
-    margin: 4rem;
+    font-size: 15px;
+    padding: 2px;
+    margin: 6px;
 }
+
 textarea {
-    font-size: 1.5rem;
-    padding: 2rem;
-    margin: auto; 
+    font-size: 15px;
+    padding: 2px;
+    margin: 6px; 
 }
+
 #submit {
     font-size: 1rem;
     border-radius: 2rem;
     padding: .5rem;
-    background-color: hotpink;
+    background-color: #160181;
+    color: white;
+
 }
+.remove {
+    background-color: red;
+    color: white;
+    margin-left: 25px;
+}
+
 footer {
     margin: 2rem;
     background-color: blanchedalmond;
 }
-.remove {
-    background-color: hotpink;  
+#messages li {
+    display: flex;
+    border: 1px solid #000; 
+    background-color: lightgray;
+    padding-left: 15px;
 }
+
