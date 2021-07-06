@@ -43,9 +43,21 @@ for(let i = 0; i < skills.length; i++) {
       removeButton.addEventListener('click', (e) => {
       let entryToRemove = e.target.parentElement;
       entryToRemove.remove();
-      
-     
-      
-
       });
   });
+const githubRequest = new XMLHttpRequest();
+  githubRequest.open("GET", "https://api.github.com/users/PerryL17/repos");
+  githubRequest.send();
+
+  githubRequest.addEventListener('load', function (e) {
+    let repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector("ul");
+      for (let i = 0; i < repositories.length; i++) {
+        let project = document.createElement("li");
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+      }
+  });
+  
