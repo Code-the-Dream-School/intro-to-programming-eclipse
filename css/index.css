@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -123,75 +124,57 @@ h1{
     float: left;
     border-radius: 50%;
 }
-.experience, .contacts{
-    width: 100%;
-    height: 70%;
+.contacts{
+    width: 80%;
+    margin: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-.experience{
-    margin-bottom: 3rem;
-}
+
 .experience h2, .contacts h2, .messages h2{
     margin: 5rem 0 3rem;
     font-size: 3rem;
     color: rgb(228, 149, 12);
     letter-spacing: 0.2rem;
 }
-.experience ul {
-    display: flex;
-    justify-content: space-around;
+.experience{
+    width: 80vw;
+    margin: 3rem auto;
+}
+.experience ul{
     list-style: none;
-    width: 80%;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    ;
     
 }
-.experience ul li a {
-    text-decoration: none;
-    background-color: rgba(0,0,0,0.3);
-    width: 100%;
+.experience li {
+    border: 3px solid rgb(228, 149, 12);
+    border-radius: 10px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.experience li:hover {
+    background: rgb(228, 149, 12);
+    color: rgb(255,255,255);
+}
+.experience li a {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color:#fff;
-    border-radius: 1rem;
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
 }
-.experience li{
-    margin: 5px;
-    width: 33.33%;
-    height: 20rem;
-    border: rgb(228, 149, 12) solid 2px;
-    border-radius: 1rem;
-    background-image: url("../images/newbg.jpeg") ;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 2rem;
-    position: relative;
-    box-shadow:  10px 20px 50px gray;
-}
-.experience ul li:after{
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: none;
-    z-index: -1;
-  }
-.experience li:hover:after{
-    color: #fff;
-    border:rgb(228, 149, 12) solid 5px;
-    border-radius: 1rem;
-    transition: 300ms;
-}
+
 .skills {
     width: 90%;
     margin: auto;
@@ -359,7 +342,7 @@ footer {
     margin-top: 50px;
 }
 /* <------small screen----> */
-@media (min-width: 700px){
+@media (min-width: 768px){
     .heading h1{
         font-size: 2rem;
    }
@@ -372,16 +355,16 @@ footer {
    .span2{
         width: 60%;
    }
-   .experience li{
-       height: 15rem;
-   }
    .messageBox form, .skills ul{
     width: 85%;
     border: 0 0.5rem;
    }
+   .experience li{
+    margin: 5px;
+}
 }
 
-@media (max-width: 400px){
+@media screen and (min-width: 360px) and (max-width:767px){
     *{font-size: 16px;}
     header{
         position: fixed;
@@ -446,19 +429,12 @@ footer {
         width: 100%;
         justify-content: space-evenly;
     }
-    .experience li{
-        width: 9rem;
-        height: 12rem;
-        margin: 0;
-        box-shadow: 2px 5px 10px gray;
-    }
+  
     .skills, .messageBox {
         box-shadow: 2px 5px 10px gray;
         background-size: fill;
     }
-    .experience ul li a{
-        font-size: 1rem;
-    }
+
     .contacts img{
         padding: 0.4rem;
         padding-bottom: 6rem;
@@ -476,5 +452,8 @@ footer {
         padding: 5px;
         bottom: 20px;
         right: 10px;
+    }
+    .experience li{
+        margin: 5px;
     }
 }
