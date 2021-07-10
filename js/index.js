@@ -45,19 +45,21 @@ for(let i = 0; i < skills.length; i++) {
       entryToRemove.remove();
       });
   });
-const githubRequest = new XMLHttpRequest();
-  githubRequest.open("GET", "https://api.github.com/users/PerryL17/repos");
-  githubRequest.send();
 
-  githubRequest.addEventListener('load', function (e) {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
-      for (let i = 0; i < repositories.length; i++) {
+  let projectSection = document.getElementById("projects");
+  let projectList = projectSection.querySelector("ul");
+  
+  fetch("https://api.github.com/users/PerryL17/repos")
+    .then( response => response.json())
+    .then( data =>  githubRequest(data))
+    .catch( error => console.log('There is a problem', error));
+
+  function githubRequest(data) {
+    for (let i = 0; i < data.length; i++) {
         let project = document.createElement("li");
-        project.innerText = repositories[i].name;
+        project.innerText = data[i].name;
         projectList.appendChild(project);
-      }
-  });
+    }
+
+  }
   

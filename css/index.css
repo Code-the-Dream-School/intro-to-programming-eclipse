@@ -71,12 +71,12 @@ h2 {
     font-size: 1.5rem;
     color: #0c033d4d;
     font-weight: bold;
+    font-family: 'Rock Salt', cursive;
 }
 #about {
-    margin: 2rem;
-    padding: 1.5rem;
+    padding: 1.5rem; 
     font-size: 20px;
-   
+    font-family: 'Rock Salt', cursive;
 }
 #experience li {
     display: flex;
