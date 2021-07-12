@@ -59,18 +59,17 @@ messageForm.addEventListener('submit', (e) => {
 
 //AJAX practice... adding GitHub repositories to my portfolio
 const githubRequest = new XMLHttpRequest();
-//Should I put my callback function here? Do I need a callback function?
 //Open method (as the assigment asks you to do)
 githubRequest.open('GET','https://api.github.com/users/mnca16/repos');
 githubRequest.send();
 githubRequest.addEventListener('load', (event) => {
-let repositories = JSON.parse(githubRequest.response)
+const repositories = JSON.parse(githubRequest.response)
 console.log(repositories);
 let projectSection = document.getElementById('projects');
 let projectList = projectSection.querySelector('ul');
 for(let i = 0; i < repositories.length; i++) {
     let project = document.createElement('li');
-    project.innerText = repositories[i].name;
+    project.innerHTML = `<a href="${repositories[i].html_url}"> ${repositories[i].name}</a> ${repositories[i].description} ${repositories[i].created_at}}`
     projectList.appendChild(project);
 
 }
