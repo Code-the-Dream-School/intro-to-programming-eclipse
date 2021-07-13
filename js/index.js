@@ -33,7 +33,7 @@ menuButton(hideMenu, "-200px")
 /*----end----*/
 /* ----scroll to top button----*/
 window.onscroll = function() {scrollFunction()}
-function scrollFunction(){
+const scrollFunction = () =>{
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
         topButton.style.display = "block";
     }else{
@@ -110,5 +110,26 @@ messageForm.addEventListener('submit', (event)=>{
     })
 })
 
-
-
+const githubRequest = new XMLHttpRequest ();
+githubRequest.open('GET', "https://api.github.com/users/MunirNuristani/repos")
+githubRequest.send();
+githubRequest.onload = function() {
+    let repositories = JSON.parse(this.response);
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');   
+    for (let i = 0; i<repositories.length; i++){
+        if(repositories[i].name==="rock-paper-scissors" || 
+           repositories[i].name === "tic-tac-toe" ||
+           repositories[i].name === "intro-to-programming-eclipse"){
+            let project = document.createElement('li')
+            let link = document.createElement('a')
+            let clearName = repositories[i].name.split("-");
+            let newName = clearName.join(" ").toUpperCase()
+            link.setAttribute("href",repositories[i].html_url)
+            link.setAttribute("target", "_blank")
+            project.appendChild(link);
+            link.innerText = newName;
+            projectList.appendChild(project)
+           }
+    }
+}
