@@ -110,24 +110,28 @@ messageForm.addEventListener('submit', (event)=>{
     })
 })
 /*-----------------------projects-----------------------*/ 
-function XHR() {
-    const githubRequest = new XMLHttpRequest ();
-    githubRequest.open('GET', "https://api.github.com/users/MunirNuristani/repos")
-    githubRequest.send();
-    githubRequest.addEventListener('load', function(){
-        const repositories = JSON.parse(this.response);
-        console.log(repositories)
-        const projectSection = document.getElementById('projects');
-        const projectList = projectSection.querySelector('ul');   
-        for (let i = 0; i<repositories.length; i++){
-            if(repositories[i].stargazers_count >=1){
-                let project = document.createElement('li')
-                let clearName = repositories[i].name.split("-");
-                let newName = clearName.join(" ").toUpperCase()
-                project.innerHTML = `<a href=${repositories[i].html_url} target="blank">${newName}</a>`
-                projectList.appendChild(project)
-            }
-        }
-    })
+function fetchURL() {
+    fetch("https://api.github.com/users/MunirNuristani/repos")
+        .then(res => res.json())
+        .then(data => setProjects(data))
+        .catch(error => console.log('error: ',error)) 
 }
-XHR();
+            
+function setProjects(repos) {
+    console.log(repos)
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');   
+    for (let i = 0; i<repos.length; i++){
+        if(repos[i].stargazers_count >=1){
+            let project = document.createElement('li')
+            let clearName = repos[i].name.split("-");
+            let newName = clearName.join(" ").toUpperCase()
+            project.innerHTML = `<a href=${repos[i].html_url} target="blank">${newName}</a>
+                                <p> Language: ${repos[i].language}</p>`
+            projectList.appendChild(project)
+        }
+    }
+}
+
+
+fetchURL();
