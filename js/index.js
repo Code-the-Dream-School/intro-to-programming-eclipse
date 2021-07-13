@@ -109,27 +109,25 @@ messageForm.addEventListener('submit', (event)=>{
         }
     })
 })
-
-const githubRequest = new XMLHttpRequest ();
-githubRequest.open('GET', "https://api.github.com/users/MunirNuristani/repos")
-githubRequest.send();
-githubRequest.onload = function() {
-    let repositories = JSON.parse(this.response);
-    const projectSection = document.getElementById('projects');
-    const projectList = projectSection.querySelector('ul');   
-    for (let i = 0; i<repositories.length; i++){
-        if(repositories[i].name==="rock-paper-scissors" || 
-           repositories[i].name === "tic-tac-toe" ||
-           repositories[i].name === "intro-to-programming-eclipse"){
-            let project = document.createElement('li')
-            let link = document.createElement('a')
-            let clearName = repositories[i].name.split("-");
-            let newName = clearName.join(" ").toUpperCase()
-            link.setAttribute("href",repositories[i].html_url)
-            link.setAttribute("target", "_blank")
-            project.appendChild(link);
-            link.innerText = newName;
-            projectList.appendChild(project)
-           }
-    }
+/*-----------------------projects-----------------------*/ 
+function XHR() {
+    const githubRequest = new XMLHttpRequest ();
+    githubRequest.open('GET', "https://api.github.com/users/MunirNuristani/repos")
+    githubRequest.send();
+    githubRequest.addEventListener('load', function(){
+        const repositories = JSON.parse(this.response);
+        console.log(repositories)
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');   
+        for (let i = 0; i<repositories.length; i++){
+            if(repositories[i].stargazers_count >=1){
+                let project = document.createElement('li')
+                let clearName = repositories[i].name.split("-");
+                let newName = clearName.join(" ").toUpperCase()
+                project.innerHTML = `<a href=${repositories[i].html_url} target="blank">${newName}</a>`
+                projectList.appendChild(project)
+            }
+        }
+    })
 }
+XHR();
