@@ -285,7 +285,7 @@ img-me {
 .all_slides {
     position: relative;
     text-align: center;
-    color: white;
+    color: whitesmoke;
 }
 
 .container_name {
@@ -307,7 +307,7 @@ img-me {
     margin-right: 10px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 23px;
-   
+    color: #c46444 solid;
 }
 
 
@@ -452,7 +452,3 @@ main {
 
   color:darkblue;
 }
-
-@media screen and (min-width: 768px) {
-      display: flex;
-    }
