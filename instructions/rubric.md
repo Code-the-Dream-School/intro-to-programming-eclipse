@@ -22,11 +22,11 @@ This ten-week project guides students through building their own personal portfo
   - [ ] One or more paragraphs of text
 - [ ] Webpage contains "Experience" section with the following:
   - [ ] Level-two heading
-  - [ ] List of previous work experience in a styled grid layout; OR
+  - [ ] List of previous work experience in a styled grid or flex layout; OR
   - [ ] One or more paragraphs of text (if student has no previous work experience)
 - [ ] Webpage contains "Skills" section with the following:
   - [ ] Level-two heading
-  - [ ] List of skills in a styled grid layout (inserted via JavaScript)
+  - [ ] List of skills in a styled grid or flex layout (inserted via JavaScript)
 - [ ] Webpage contains "Projects" section with the following:
   - [ ] Level-two heading
   - [ ] List of public repositories retrieved from GitHub API via Fetch
@@ -37,7 +37,7 @@ This ten-week project guides students through building their own personal portfo
   - [ ] Form submit event listener that adds message to list (see "Messages" section)
 - [ ] Webpage contains "Messages" section with the following:
   - [ ] Level-two heading
-  - [ ] List of messages (see "Leave a Message" form) in a styled grid layout; each list item has the following:
+  - [ ] List of messages (see "Leave a Message" form) in a styled grid or flex layout; each list item has the following:
     - [ ] Message text
     - [ ] Name of message author with "mailto" link to email address
     - [ ] "Remove" button that deletes message from list
