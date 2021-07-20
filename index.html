@@ -1,90 +1,113 @@
 <!DOCTYPE html>
-<head>
-    <title>Munir Nuristani</title>
-    <meta charset="UTF-8" >
-    <meta name="author" content="Munir Nuristani">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-</head>
-<body>  
-    <header>
-        <nav>
-            <div class="nav-links" id="nav-links" >
-                <i class="fa fa-times" id="hideMenu"></i>
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#connect">CONTACT</a></li>
+<html>
+    <head>
+        <title>Munir Nuristani</title>
+        <meta charset="UTF-8" >
+        <meta name="author" content="Munir Nuristani">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Code+Pro&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="parent">
+            <nav class="nav">
+                <ul class="navLinks">
+                    <li><a href="#home"><i class="fa fa-home"></i>HOME</a></li>
+                    <li><a href="#about"><i class="fa fa-info"></i>ABOUT</a></li>
+                    <li><a href="#skills"><i class="fa fa-magic"></i>SKILLS</a></li>
+                    <li><a href="#projects"><i class="fa fa-code" ></i>PROJECTS</a></li>
+                    <li><a href="#connect"><i class="fa fa-comments-o"></i>CONTACT</a></li>
+                </ul>
+                <div class="mobileMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+            <div class="home" id="home">
+                <div class =imgContainer>  
+                    <img class="bgImage" src="images/ezgif.com-gif-maker.gif" title="main ackground"></img>
+                </div>
+                <div class="type">
+                    <div class="typingEffect">
+                        <div class='textContainer'>
+                            <div class="typing">
+                                <h1><span class="tag">&lt;h1&gt;</span>Hello World!<span class="tag">&lt;/h1&gt;</span></h1> 
+                            </div>
+                            <h1 class="name">I'm MUNIR NURISTANI</h1>
+                        </div>  
+                        <button class="button"><a href="#about">LEARN MORE ABOUT ME</a></button>
+                    </div>
+                </div>
+            </div> 
+            <footer class="footer">
+                <div class="footerIcons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/munir.sami/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+                        <li><a href="https://twitter.com/MunirNuristani" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li><a href="https://github.com/MunirNuristani" target="_blank"><i class="fa fa-github-square fa-2x"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/munir-nuristani-6a090a154/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                        <li><a href="mailto: nuristani.munir@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+            <div class="about" id="about">
+                <div class="image"> 
+                    <img src="images/sketch.jpg" alt="creator's pic" class="aboutPic ">
+                </div>
+                <div class="aboutText">
+                    <h2>About me!</h2>
+                    <p> I'm an aspiring Front-End developer living in San Leandro, California. I have a passion for technology and science. My hunger for knowledge and determination to turn information into action has contributed to my success in different roles I have undertaken.  </p>
+                </div>
+            </div>
+            <div>
+                <button id="button" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="skills" class="skills">
+                <h2>Skills</h2>
+                <ul></ul>
+            </div>
+            <div class="experience">
+                <div id='projects'>
+                    <h2 id="exp">Projects</h2>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="contactAll">
+                
+                <div class="messageBox" id="connect">
+                    <h2> Leave a Message</h2>
+                    <form id="leave_message" name="leave_message">
+                        <label for="name">Name</label> <br/>
+                        <input type="text" name="name" required placeholder="Name" /><br/>
+                        <label for="email">Email</label><br/>
+                        <input type="email" name="email" required placeholder="Name@example.com" /><br/>
+                        <label for="message">Message</label><br/>
+                        <textarea name="message" required placeholder="Enter Message Here!"></textarea><br/>
+                        <button type="submit">Submit</button><br/>
+                    </form>
+                </div>
+            </div>
+            <div id="messages" class="messages" > 
+                <h2>Messages</h2>
+                <ul id='hideShow'>
                 </ul>
             </div>
-            <i class="fa fa-bars" id="showMenu"></i>
-        </nav>
-    </header>
-   
-    <div class="heading" id="about">
         
-        <div class="aboutSection">
-            
-            <span class="span">
-                <h2>Hello Everybody, I'm</h2>
-                <h1>MUNIR NURISTANI</h1>
-                <p>  I am an aspiring web developer.  
-                     I am working on several fun projects which wil be published soon. The very first project that I worked on is a version of Rock, Paper and Scissors Game.</p>
-            </span>
+            <script src="js/index.js"></script>
         </div>
-    </div>
-    <div>
-        <button id="button" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-        </button>
-    </div>
-    <div class="experience">
-        <section id='projects'>
-            <h2 id="exp">Projects</h2>
-            <ul>
-            </ul>
-    </section>
-    </div>
-    <div id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul></ul>
-    </div>
-    <div class="contacts">
-        <h2 id="connect">Contact</h2>
-        <ul>
-            <li><a href="https://www.facebook.com/munir.sami/"target = "_blank"><img src="../images/fb.png" width="100px" alt="facebook-icon"/></a></li>
-            <li><a href="https://twitter.com/MunirNuristani"target = "_blank"><img src="../images/twitter.png" width="100px" alt="twitter-icon"/></a></li>
-            <li><a href="https://github.com/MunirNuristani"target = "_blank"><img src="../images/github.png" width="100px" alt="github-icon"/></a></li>
-            <li><a href="https://www.linkedin.com/in/munir-nuristani-6a090a154/" target="_blank"><img src="../images/linkedin.png" width="100px"/></a></li>
-            <li><a href="mailto: nuristani.munir@gmail.com"><img src="../images/mail.png" width="100px" alt="mail-icon"/></a></li>
-        </ul>
-        
-    </div>
-    <div class="messageBox">
-        <h2> Leave a Message</h2>
-        <form id="leave_message" name="leave_message">
-            <label for="name">Name</label> <br/>
-            <input type="text" name="name" required placeholder="Name" /><br/>
-            <label for="email">Email</label><br/>
-            <input type="email" name="email" required placeholder="Name@example.com" /><br/>
-            <label for="message">Message</label><br/>
-            <textarea name="message" required placeholder="Enter Message Here!"></textarea><br/>
-            <button type="submit">Submit</button><br/>
-        </form>
-    </div>
-    <div id="messages" class="messages" > 
-        <h2>Messages</h2>
-        <ul id='hideShow'>
-        </ul>
-    </div>
-    <footer></footer>
-    <script src="js/index.js"></script>
-</body>
+    </body>
+</html>
