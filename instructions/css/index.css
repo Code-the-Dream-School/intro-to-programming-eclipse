@@ -6,10 +6,11 @@
 }
 
 
+
+
 li, a, button {
-    color: #545479;
-    text-decoration: none;
-    cursor: pointer;
+   /* color: #c46444; */
+   text-decoration: none;
 }
 
 
@@ -18,7 +19,7 @@ header {
     font-family: 'Roboto Condensed', sans-serif;   
     margin: 0;
     padding: 3px 4%;
-    background-color: #f3cbb6;
+    background-color: transparent;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -28,15 +29,17 @@ header {
     list-style: none;
     display: inline-block;
     padding: 0px 15px;
+    color:#c46444 ;
 
 }
 
 .list_sections li a {
     transition: all 0.3s ease 0s;
+    color: #c46444;
 }
 
 .list_sections li a:hover {
-    color:blue
+    color:darkblue;
 }
 
 .btn_head {
@@ -46,51 +49,98 @@ header {
     border-radius: 50px;
     transition: all 0.3s ease 0s;
     margin-left: 20px;
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 15px;
+    cursor: pointer;
 
 }
 
 /* header end*/
 
+
+
+/*General style*/
+
+
 body {
- background-color: #DDEEEF;
+ background-color: #fff;
  color: #545479;
 
 }
 
+.sections-list{
+    list-style: none;
+}
+
 .margin {
-  margin-left: 50px;
+   display: block;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
 }
 
 .all_heading {
  font-size: 30px;
  font-weight: bold;
- color: #FA844B;
+ color: #c46444;
+ list-style: none;
+ font-family: 'Roboto Condensed', sans-serif; 
 
 }
 
+/*All tittles*/
 
-.boxes {
-    border:#545479 0.5px solid;
-    border-right: none ; 
-    padding: 5px; 
-    margin-bottom: 10px;
-  
+.labels {
+    font-size: 18px;
+    color: #c46444;
+    font-family: sans-serif;
 }
 
-.b2 {
-    border-left: none ;
-    border-right: #545479 0.5px solid ;
+
+/*Experience boxes*/
+.experience_box {
+
+   background-color: #A5B99C;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+   color: white;
+   margin-bottom: 10px;
+   height: 30px;
+   width: 100%;
+   margin-left: -30px;
 }
 
+
+.experience_box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.text-expe {
+   color: black solid;
+   font-size: large;
+   margin-bottom: 5px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+
+}
+
+/*Skills section*/
 
 #skills > ul > li {
-    border: black solid 2px;
+    border: #54624e solid 3px;
+    color: #54624e;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 8px;
     margin: 10px;
     width: 100px;
+    border-radius: 10px;
+    
 }
 
 #skills > ul {
@@ -101,56 +151,71 @@ body {
 
 }
 
+
+
+/*Forms*/
+/*Buttons*/
+.input {
+    font-family: sans-serif;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 1px;
+    width: 200px;
+}
+
+.textarea {
+    font-family: sans-serif;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 1px;
+    width: 200px;
+}
+
 .labels {
-    font-size: 18px;
-    color: #FA844B;
-    font-family: sans-serif;
-}
-
-input {
-    font-family: sans-serif;
-    border: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #f2f2f2;
-    padding: 12px;
-    border-radius: 1px;
-    width: 200px;
-}
-
-textarea {
-    font-family: sans-serif;
-    border: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #f2f2f2;
-    padding: 12px;
-    border-radius: 1px;
-    width: 200px;
-}
-
-label {
  width: 100px;
- display: inline-block;
  padding: 10px;
  margin-block: 15px;
+}
+
+.field {
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 30%;
+ 
+}
+
+.field-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.text-input {
+    width: 175%;
 }
 
 .submit-button {
     width: 100px;
     height: 25px;
     border: none;
-    color: #545479;
-    background-color: white;
+    color: #c46444;
+    background-color: whitesmoke;
     border-radius: 4px;
     box-shadow: inset 0 0 0 0 hsl(20, 74%, 85%);
     transition: ease-in-out 0.1s;
     outline: none;
-    margin-left: 125px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: medium;
 }
 
 .submit-button:hover {
@@ -170,38 +235,224 @@ label {
 
 }
 
-/* Experience FlexBox container
-.container {
-   border-color: black;
-   border-width: 5px;
-   border-style: inset;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
 
+/*CAROUSEL About Me Section*/
+
+
+/*Carousel img*/
+
+img-me {
+    width: 100px;
+    height: 100px;
+}
+
+.img_size {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    filter: brightness(0.7);
+}
+.text__carousel_1 {
+    background-color:#bfc5bb;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.text__carousel_2 {
+    background-color:#d4c7b0;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel img/button */
+.buttons_size {
+    width: 10px;
+    height: 10px;
+}
+
+/*Carousel div container*/
+.carousel {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+/*Carousel information about me 3 slides*/
+
+.all_slides {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.container_name {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    font-family: 'Cormorant Garamond', serif;
+    color: white solid;
+    font-weight: bolder;
 
 }
 
-*/
 
-/* Experience FlexBox container*/
-
-.experience_cont {
-    display: flex;
-    justify-content:space-between; 
-}
-
-.work_expe {
-   flex: 1;
-   flex-direction: column;
+.container_p-1 {
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
    
+}
+
+
+
+
+/* Carousel with just the 3 pictures container*/
+
+.carousel__track-container {
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+/* Carousel track ul tag with the pictures inside*/
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+
+/* Carousel li tag*/
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 
 }
 
-.dates {
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.carousel__button--right {
+    right: -40px;
+}
+
+.carousel__button--left {
+    left: -40px;
+}
+
+.carousel__nav {
     display: flex;
-    flex-direction: column;
-    
-    
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.carousel_indicator.current-slide {
+    background: rgba(0,0,0,.75);
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+
+
+
+/*Footer container*/
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #c46444;
+    color:white;
+}
+
+
+.footer_container > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 15px;
 
 }
+
+.social_media > button > img {
+    height: 20px;
+    width: 20px;
+    
+}
+
+.footer_aligment {
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90vw;
+}
+
+
+/* All information */
+main {
+    display: block;
+}
+
+.main_container {
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90vw;
+}
+
+/*Messages from users*/
+
+.list_item {
+    list-style: none;
+    padding: 10px;
+}
+
+/*PROJECTS*/
+
+#projects > ul > li {
+    color:black;
+    font-size: medium;
+}
+
+.repo :hover  {
+
+  color:darkblue;
+}
+
+@media screen and (min-width: 768px) {
+      display: flex;
+    }

@@ -13,165 +13,187 @@
     <!-- Body font style -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
+    <!--Carousel font style-->
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
   </head>
 
   <body>
-    <!--
-       Navigation bar 
-         1. Create a header with a nav element
-         2. To Link all the section witn my nav header 
-         3. I want my name on the left side 
-         4. I want my sections on the right side
-         5. When I minimize the size of the page I want manu on the right side
-    -->
-    <header>
-      <h3 class="main_name"><a href="#top">Monica Delgado</a></h3>
+    <!--Navigation bar-->
+    <header class="main_container">
+      <h3 class="main_name"><a href="#top"><b>Monica Delgado</b></a></h3>
        <nav>
          <ul class="list_sections">
            <li><a href="#about">About</a></li>
            <li><a href="#experience">Experience</a></li>
            <li><a href="#skills">Skills</a></li>
+           <li><a href="#projects">Projects</a></li>
            <li><a href="#message">Leave a message</a></li>
          </ul>
        </nav>
        <a class="connet_btn" href= "mailto: mnca.delgado@gmail.com" ><button class="btn_head">Connect</button></a>
-
     </header>
-
-
-    <!--STARTING SECTION AS AN UNORDERD LIST-->
-    <ul>
-
-      <!-- ABOUT ME SECTION-->
+    
+    <main>
+    <div class="main_container">
+    <!--STARTING SECTIONS AS AN UNORDERD LIST-->
+    <ul class="sections-list">
+      <!--ABOUT ME SECTION WITH CAROUSEL  -->
       <li>
         <section>
-          <h1 class="all_heading" id="about">About:</h1>
-          <p class="margin">
-            I'm Monica, an enthusiastic apprentice at Code the Dream (CTD) based in North Carolina.
-          </p>
-          <p class="margin">
-            Something interesting about me is that I am a fan of psychology, philosophy and history. In my home country I studied psychology and civil engineering . I have always wondered how our species created this universe in what is now a little machine called a computer, with which we can create, share and grow. This motivated me to change my path and start a career as a web developer. Drawing, designing and teaching are part of my passions too. When I am not working/studying I spend time reading, whatching a good tv show, eating delicious things, working out and enjoying time with my family.
-          </p>
-        </section>
-      </li>
+          <div class="carousel">
+             <button class="carousel__button carousel__button--left is-hidden">
+               <img class="buttons_size" src="img/left-arrow.png" alt="">
+             </button>
 
-      <!-- MY EXPERIENCE SECTION-->
+           <div class="carousel__track-container">
+
+             <ul class="carousel__track">
+                 <li class="carousel__slide current-slide">
+                   <div class="all_slides">
+                     <img src="img/colors.jpg" alt="" class="img_size img-me">
+                     <p class="container_name">Hello! My name is Monica </p>
+                   </div>
+                  </li>
+                 <li class="carousel__slide">
+                     <!--<img src="img/aboutme.jpg" alt="" class="img_size">-->
+                     <div class="text__carousel_1 all_slides">
+                        <p class="container_p-1">I am a passionate apprentice of coding, building my experience on web development, in order to be a full-stack developer. As a programmer I spend my time learning with Code the Dream (CTD). During my time with them I had learned the basics of programming and how websites work.</p>
+                     </div>
+             
+                  </li>
+                 <li class="carousel__slide">
+                    <!--<img src="img/myoffice.jpg" alt="" class="img_size">-->
+                    <div class="text__carousel_2 all_slides">
+                      <p class="container_p-1">I am a fan of human behavior, philosophy, and history. In my home country I studied psychology and civil engineering. Drawing, designing, and teaching are also part of my passions. When I am not working/studying I spend time reading, watching a good tv show, eating delicious things, hiking, climbing, working out and enjoying time with my family.</p>
+                    </div>
+                
+                  </li>
+
+              </ul>
+           </div>
+           <button class="carousel__button carousel__button--right">
+             <img  class="buttons_size" src="img/right-arrow.png" alt="">
+           </button>
+
+          <!--Buttom buttons-->
+          <div class="carousel__nav">
+               <button class="carousel_indicator current-slide"></button>
+               <button class="carousel_indicator "></button>
+               <button class="carousel_indicator "></button>
+           </div>
+
+          </div>
+       </section>
+     </li>
+    
+      <!-- MY EXPERIENCE SECTION WITH FLEXBOX-->
       <li>
         <section>
-          <h1 class="all_heading" id="experience">Experience</h1>
-         <!-- 
-         x 1. I want to create sections for my experiences 
-         x 2. I want each section to have borders (boxes)
-         x 3. I want the border/boxes to be orange 
-         x 4. I want the thickness of the border to be 5px
-         x 5. I want 5 px of space between the boxes 
-         -->
-         <!--
-          <div class="container">
-            <div class="boxes">Nanny/ House Manager – Belgrove family, January/Present </div>
-            <div class="boxes">Nanny – Collins-Bucks family, January/2020 – December/2020</div>
-            <div class="boxes">Teacher, Sounds and Color, May/2018 – December/2019</div>
-            <div class="boxes">Waitress/Bartender, La Rancherita, January/2017- April/2018</div>
-          </div>
-          -->
-          <div id="experience_box">
-            <div class="experience_cont">
-
-              <div class="work_expe">
-                <div class="boxes">Nanny/ House Manager – Belgrove family</div>
-                <div class="boxes">Nanny – Collins-Bucks family</div>
-                <div class="boxes">Teacher, Sounds and Color</div>
-                <div class="boxes">Waitress/Bartender, La Rancherita</div>
-              </div>
-
-              <div class="dates">
-                <div class="boxes b2">January/Present </div>
-                <div class="boxes b2">January/2020 – December/2020</div>
-                <div class="boxes b2">May/2018 – December/2019</div>
-                <div class="boxes b2">January/2017- April/2018</div>
-              </div>
-
-            </div>
-          </div>
-
- 
+          <h2 class="all_heading" id="experience">Experience</h2>
+          <p class="text-expe">
+            I have experience working with basic Javascript, CSS, and HTML. Before taking an interest in programming I worked as a Teacher, nanny, and waitress.
+          </p>
+        <ul>
+          <li class="experience_box">
+            <span><strong>Nanny/House Manager</strong>     Belgrove Family</span>
+            <span>January/Present</span>
+          </li>
+          <li class="experience_box">
+            <span><strong>Nanny</strong>     Collins-Bucks family</span >
+            <span>January/2020 – December/2020</span>
+          </li>
+          <li class="experience_box">
+            <span><strong>Teacher</strong>      Sounds and Color</span>
+            <span>May/2018 – December/2019</span>
+          </li>
+          <li class="experience_box">
+            <span><strong>Waitress/Bartender</strong>      Rancherita - Crabtree Mall</span>
+            <span">January/2017- April/2018</span>
+          </li>
+         </ul>
         </section>
       </li>
 
       <!--MY SKILLS SECTION-->
       <section id="skills">
         <h2 class="all_heading" id="skills">Skills</h2>
-        <!--
-           x1. I want my skills (list) in the same line 
-           x2. I want my skills/list inside separed styled boxes 
-           x3. I want 2px space between the boxes 
-           x4. I want to erase the circle on each list item
-           x5. I want the thickness of the border to be 2 px
-
-        -->
+      <!--I added the content with JavaScript-->
         <ul></ul>
       </section>
       
 
       <!--PROJECTS SECTION-->
-      <section id="projects">
-        <h2>Projects</h2>
-        <ul></ul>
-
-     
-
+      <section id="projects" >
+        <h2 class="all_heading">Projects</h2>
+      <!--I addes my projects with JS-->
+        <ul style="list-style: none;" class="repo" ></ul>
       </section>
 
-      <!--CONTACT SECTION--> 
-      <li>
-        <section>
-          <h1 class="all_heading" id="connect">Connect</h1>
-          <p><a href= "mailto: mnca.delgado@gmail.com">mnca.delgado@gmail.com</a></p>
-          <p><a href="https://github.com/mnca16" target="_blank">github.com/mnca16</a></p>
-        </section>
-      </li>
-
-    </ul>
+    
      
     <!--form code (Leave me a message)--> 
+    <li>
     <section>
      <h2 class="all_heading" id="message">Leave a Message</h2>
 
-     <!--
-      Message form 
-       x1. I want to change size and color of the labels
-       x2. Change the font size, padding and border of inputs and textarea
-       x3. Add spacing between fields 
-      -->
-
      <form name="leave_message">
+       <!--name-->
+       <div class="field field-inline">
+         <label class="labels" >Name:</label>
+         <input class="input" type="text" name="name" required=true placeholder="Enter Name">
+       </div>
 
-       <label class="labels" >Name:</label>
-        <input type="text" name="name" required=true placeholder="Enter Text">
-
-       <label class="labels" >Email:</label>
-        <input type="email" name="email" required=true placeholder="Enter Text">
-        
+        <!--Email-->
+       <div class="field field-inline">
+         <label class="labels" >Email:</label>
+         <input class="input" type="email" name="email" required=true placeholder="Enter Email">
+       </div>
        </br>
-       <label class="labels" >Message:</label>
-        <textarea name="message" required=true>
-        </textarea>
-
+       <!--Message-->
+       <div class="field">
+         <label class="labels">Message:</label>
+         <textarea class="input text-input" name="message" required=true>
+         </textarea>
+      </div>
       </br>
-        <button type="submit" class="submit-button">Submit</button><br>
+        <button type="submit" class="submit-button text-input">Submit</button><br>
 
-     </form>
-    </section>
-    
+   </form>
+   </section>
+   </li>
 
     <!--Showing people's opinion or experiences with me/portfolio -->
-    <section id="messages" class="message-block">
+    <li>
+    <section id="messages" class="message-block" style="display: none">
       <h2 class="all_heading">Messages</h2>
       <ul></ul>
     </section>
-    
+  </li>
+  </ul>
 
-    <footer></footer>
+  </div>
+  </main>
+      <!--   Footer   -->
+      <footer>
+        <div class="footer_aligment">
+          <nav>
+            <ul class="footer_container">
+               <li>
+                 <a class="social_media" href="https://github.com/mnca16" target="_blank"><button><img src="img/github.png" alt=""></button></a>
+               </li>
+               <li>
+                 <a class="social_media" href="mailto: mnca.delgado@gmail.com"><button><img src="img/gmail.png" alt=""></button></a>
+                </li>
+             </ul>
+          </nav>
+        </div>
+      </footer>
   <script src="js/index.js"> </script>
   </body>
 </html>
