@@ -37,14 +37,14 @@ const navSlide=() =>{
     const navLinksList = document.querySelectorAll('.navLinks li')
     const newIcons = document.createElement('ul')
     for(let i =0; i< footerIcons.length; i++){
-        console.log(footerIcons[i])
+       
         let newFooterIcon = footerIcons[i].cloneNode(true)
         newIcons.appendChild(newFooterIcon)
     }
     newIcons.classList.add('menuIcons')
     navLinks.appendChild(newIcons)
     const newIconsList = document.querySelectorAll('.menuIcons li')
-    console.log(navLinks)
+    
     //toggle menu
     mobileMenu.addEventListener('click', ()=>{
         navLinks.classList.toggle("nav-active")
@@ -74,11 +74,11 @@ copyright.innerHTML=("Munir Nuristani &copy; " + thisYear)
 footer.appendChild(copyright)
 
 /*------ display skills ------*/
-function addSkills(skills) {
-    for(let i = 0; i < skills.length; i++){
+function addSkills(arr) {
+    for(let i = 0; i < arr.length; i++){
         let skill = document.createElement('li');
-        skill.innerHTML= (skills[i]);
-        skillList.appendChild(skill);   
+        skill.innerHTML= (arr[i]);
+        skillList.appendChild(skill);  
     }
 }
 
@@ -180,7 +180,7 @@ function app(){
     addSkills(skills);
     navSlide();
 }
-app
+app()
 
 /*---------helper functions--------*/
 function errorMessage() {
