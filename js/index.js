@@ -10,7 +10,7 @@ const menuButtons = document.querySelectorAll(".navLinks a")
 const menuIcons = document.querySelectorAll(".navLinks i")
 const footerIcons = document.querySelectorAll(".footer li")
 let skills = ['IT Support','JavaScript', 'HTML',
-             'CSS', '3D Design and Printing']
+             'CSS', 'Security Management' , 'Crisis Management']
 
 let today = new Date();
 let thisYear = today.getFullYear();
