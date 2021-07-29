@@ -50,5 +50,19 @@ messageForm.addEventListener("submit", (event) => {
     messageForm.reset();
 
 });
+const githubRequest= new XMLHttpRequest();
 
+githubRequest.open("GET","https://api.github.com/users/adriana2020ca/repos" )
+githubRequest.send()
+githubRequest.addEventListener("load",function(){
+   const repositories= JSON.parse(this.response)
+   console.log(repositories);
+   const projectSection=document.getElementById("projects");
+   const projectList=projectSection.querySelector("ul");
+   for(let i=0; i < repositories.length; i++ ){
+       const project=document.createElement("li");
+       project.innerHTML=`<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+       projectList.appendChild(project);
+   }
+})
 

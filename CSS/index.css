@@ -28,6 +28,18 @@ h1, h2 {
 li {
    list-style-type: none;
 }
+#container {
+   display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+
+   /*background-color: blue; It gives color to the background of the block*/
+}
+.containerdiv {
+   background-color: rgb(119, 119, 243);  
+   min-width: 100px;
+   margin: 20px;
+}
 input {
    font-size: 60px;
    margin-bottom: 2rem;
@@ -54,13 +66,21 @@ button {
    padding: auto;
    background-color: ;
 }
+.menu {
+display: flex;
+}
 @media (max-width: 1000px) {
+header{
+background-color: rgb(219, 247, 191);
+ }
 h2 {
    font-size: 30px;
+
 }
 
 }
 @media (max-width: 500px) {
+
  button{
     font-size: 50px;
  };
